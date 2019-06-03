@@ -15,4 +15,6 @@ class Show < ActiveRecord::Base
     Show.order(:rating).first
   end
 
+  def self.ratings_sum
+    Show.sum('ratings')
 end
